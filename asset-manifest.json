@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/zynerdassignment/static/css/main.6035657d.css",
+    "main.js": "/zynerdassignment/static/js/main.18769b9f.js",
+    "static/js/787.7f981df0.chunk.js": "/zynerdassignment/static/js/787.7f981df0.chunk.js",
+    "static/media/login.png": "/zynerdassignment/static/media/login.71bd86372a543a7d16ab.png",
+    "static/media/logo.svg": "/zynerdassignment/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/zynerdassignment/index.html",
+    "main.6035657d.css.map": "/zynerdassignment/static/css/main.6035657d.css.map",
+    "main.18769b9f.js.map": "/zynerdassignment/static/js/main.18769b9f.js.map",
+    "787.7f981df0.chunk.js.map": "/zynerdassignment/static/js/787.7f981df0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6035657d.css",
+    "static/js/main.18769b9f.js"
+  ]
+}
