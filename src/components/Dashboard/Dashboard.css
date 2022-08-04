@@ -1,0 +1,106 @@
+.dashboard{
+    width: 100vw;
+    height: 100vh;
+    margin: 7px 7px 5px 13px;
+}
+.topheader{
+    height:8vh
+}
+.dashboard-spliting{
+    display:flex;
+    width: 100%;
+    /* background-color: red; */
+}
+.header-container{
+    padding: 7px 15px 7px 15px;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #e5e4e2;
+}
+.dashboard-icons{
+    margin-left: 50px;
+    width: 300px;
+    height: 120px;
+    /* background-color: red; */
+}
+.dashboard-icons .dashboard-icon{
+    /* background-color: green !important; */
+    width: 100px;
+    height: 100px;
+    border: none;
+    color: #b3acad;
+    background-color: #b3acad;
+    border-radius: 50%;
+}
+.dashboard-container{
+    width: 73%;
+    /* background-color: green !important; */
+}
+.video{
+    
+    margin-top: 6px;
+    background-color: #e5e4e2;
+    border-radius: 5px;
+    width: 400px;
+    height: 76vh;
+}
+.video-container{
+    padding: 5px;
+    width: 380px;
+    height: 72px;
+    display: flex;
+}
+.dashboard-topright{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    background-color: #e5e4e2;
+    margin-left: 5px;
+}
+.icons{
+background-color: white;
+border: none;
+color:white;
+border-radius: 50%;
+margin-left: 8px;
+
+}
+.video-announcement-container{
+    display:flex;
+}
+.announcement-event-container{
+    margin-top: 6px;
+    margin-left: 8px;
+}
+.announcement-topheader{
+    display: flex;
+}
+.announcement-table table{
+    border :1px solid black;
+    border-radius: 6px;
+}
+.announcement-table table th{
+    background-color: #b3acad;
+} 
+.announcement-table table td{
+    border-bottom: 1px solid#b3acad;
+}
+.notification-table{
+    border: 6px;
+    border: 1px solid black;
+    margin: 20px 8px;
+}
+.notification-table table th{
+    background-color: #b3acad;
+}
+.notification-table table td{
+    border-bottom: 1px solid#b3acad;
+}
+.event{
+    margin-top:8px;
+    }
