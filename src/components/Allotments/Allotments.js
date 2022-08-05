@@ -1,20 +1,86 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CircleOutlined } from '@mui/icons-material'
 import "./Allotments.css"
+var token;
+var cons;
+
+
 const Allotments = () => {
+    const [selectedValue, setSelectedValue] = useState('');
+    const [counsel, setCounsel] = useState('')
+    token = sessionStorage.getItem('token');
+    console.log(token);
+
+    const getcounseling = async () => {
+
+        try {
+
+            const response = await fetch('http://hire.zynerd.com/ui/allotments/counsellings', {
+                method: 'GET',
+                headers: {
+                    //Header Defination
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': token,
+                },
+
+
+            })
+
+            const json = await response.json()
+
+
+            setCounsel(Object.keys(json.data))
+            // setCounsel(json.data.centre)
+            console.log(Object.keys(json.data))
+            console.log("Hi",json.data);
+
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
+    useEffect(() => {
+        getcounseling();
+    }, [])
+    console.log("hello", counsel);
+    const onChangecounseling = () => {
+
+    }
+    // const rendercounseling = () => {
+        
+    // return  (counsel.map((item) => (
+    //     <option  label={item} value={item.id} >{item}</option>
+    //     ))
+    // )
+    //     }
+
+
     return (
         <div className='allotment'>
             <div className='allotment-container'>
                 <div className='allotment-header'>
                     <div className='allotment-inside'>
                         <h3>Allotments</h3>
-                        <form>
-                            <select name="dropdown">
-                                <option value="Computer Architecture" selected>Central</option>
-                                <option value="Java">Java</option>
-                                <option value="Discrete Mathematics">Discrete Mathematics</option>
-                            </select>
-                        </form></div>
+
+                        <form >
+                            {/* onSubmit={this.handleSubmit} */}
+                            <label>
+
+                                <select value={selectedValue} onChange={(value, item) => onChangecounseling(value, item)}>
+                                    {counsel.map((item)=>(
+                                    <option >{item}</option>
+                                    ))}
+
+                                </select>
+                            </label>
+                            {/* <input type="submit" value="Submit" /> */}
+                        </form>
+
+
+
+                    </div>
                     <div className='dashboard-topright'>
 
                         <CircleOutlined className='icons' />
@@ -58,9 +124,9 @@ const Allotments = () => {
                                 <hr />
                                 <div>
                                     <label>
-State
+                                        State
                                     </label>
-                                    <br/>
+                                    <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -68,8 +134,8 @@ State
                                 </div>
                                 <div>
                                     <label>
-Institutes
-                                    </label> <br/>
+                                        Institutes
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -77,8 +143,8 @@ Institutes
                                 </div>
                                 <div>
                                     <label>
-Course
-                                    </label> <br/>
+                                        Course
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -87,8 +153,8 @@ Course
                                 <div>
                                     <label>
 
-Quota
-                                    </label> <br/>
+                                        Quota
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -96,8 +162,8 @@ Quota
                                 </div>
                                 <div>
                                     <label>
-Year
-                                    </label> <br/>
+                                        Year
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -105,8 +171,8 @@ Year
                                 </div>
                                 <div>
                                     <label>
-Round
-                                    </label> <br/>
+                                        Round
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -114,8 +180,8 @@ Round
                                 </div>
                                 <div>
                                     <label>
-Catagory
-                                    </label> <br/>
+                                        Catagory
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -123,8 +189,8 @@ Catagory
                                 </div>
                                 <div>
                                     <label>
-DegreeType
-                                    </label> <br/>
+                                        DegreeType
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
@@ -132,14 +198,14 @@ DegreeType
                                 </div>
                                 <div>
                                     <label>
-Sub Exams
-                                    </label> <br/>
+                                        Sub Exams
+                                    </label> <br />
                                     <select name="dropdown">
                                         <option value="Computer Architecture" selected>TamilNadu</option>
                                         <option value="Java">Kerala</option>
                                     </select>
                                 </div>
-                                
+
                             </form>
 
                         </div>

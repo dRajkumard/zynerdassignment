@@ -20,6 +20,7 @@ function App() {
           
           <div className='app'>
           <Sidebar />
+          <Switch>
             <Route path='/home'>
             
             <Dashboard />
@@ -27,6 +28,7 @@ function App() {
             <Route path="/allotment">
               <Allotments/>
             </Route>
+            </Switch>
           </div>
         </Route> 
       </Switch>
